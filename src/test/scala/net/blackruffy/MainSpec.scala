@@ -1,13 +1,13 @@
 package net.blackruffy
 
-import org.specs2.mutable.Specification
- 
-class MainSpec extends Specification {
- 
+import org.scalatest.{ WordSpec, Matchers, BeforeAndAfter, BeforeAndAfterAll }
+
+class MainSpec extends WordSpec with Matchers with BeforeAndAfter {
+
   "1 + 1" should {
- 
+
     "2" in {
-      (1 + 1) must_== 2
+      (1 + 1) should be (2)
     }
   }
 }
